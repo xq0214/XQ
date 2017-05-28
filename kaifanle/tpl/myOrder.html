@@ -1,0 +1,28 @@
+<div id="header" ng-include="'tpl/header.html'"></div>
+  <div class="container">
+       <div class="myOrder">
+           <h2>我的订单</h2>
+           <div class="table-responsive">
+               <table class="table table-striped table-hover">
+                   <thead>
+                       <tr>
+                           <th>编号</th>
+                           <th>菜单</th>
+                           <th>下单时间</th>
+                           <th>联系人</th>
+                       </tr>
+                   </thead>
+                   <tbody >
+                        <tr ng-repeat="d in myorderdetail">
+                            <td>{{d.OID}}</td>
+                            <td><img class="img-responsive" ng-src="img/{{d.IMG_SM}}"></td>
+                            <td>{{d.ORDER_TIME | date:"yyyy-MM-dd  hh:mm:ss" }}</td>
+                            <td>{{d.USER_NAME}}</td>
+                        </tr>
+                   </tbody>
+               </table>
+           </div>
+       </div>
+  </div>
+
+<div id="footer" ng-include="'tpl/footer.html'"></div>

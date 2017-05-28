@@ -1,0 +1,34 @@
+<div id="header" ng-include="'tpl/header.html'"></div>
+<div class="container">
+    <div class="order" ng-hide="allok">
+        <form>
+            <div class="form-group">
+                <label class="control-label" for="user">联系人：</label>
+                <input ng-model="order.user_name" id="user" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label class="control-label">性别：</label>
+                <div>
+                    <label class="radio-inline">
+                        <input ng-model="order.sex" type="radio" name="sex" value="1"> 男
+                    </label>
+                    <label class="radio-inline">
+                        <input ng-model="order.sex" type="radio" name="sex" value="2"> 女
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="tel" class="control-label">联系电话:</label>
+                <input ng-model="order.phone" type="text" id="tel" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="address" class="control-label">送餐地址：</label>
+                <textarea ng-model="order.addr" id="address" class="form-control address" rows="4"></textarea>
+            </div>
+            <button ng-click="ordered()" class="btn btn-success btn-block">确定下单</button>
+        </form>
+    </div>
+    <div ng-show="allok" class="alert alert-info okmsg">订单成功！ 您的订单编号为:{{okmsg.oid}}。您可以在用户中心查看订单状态</div>
+</div>
+
+<div id="footer" ng-include="'tpl/footer.html'"></div>

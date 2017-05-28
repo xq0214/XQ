@@ -1,0 +1,24 @@
+<div id="header" ng-include="'tpl/header.html'" xmlns="http://www.w3.org/1999/html"></div>
+<div class="container">
+    <ul class="breadcrumb detail-nav">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">详情</a></li>
+    </ul>
+    <div class="detail">
+        <h3>{{mydetail.NAME}}</h3>
+        <hr>
+        <img class="img-responsive" ng-src="img/{{mydetail.IMG_LG}}" alt="">
+        <div class="detailText">
+            <p>原料:{{mydetail.MATERIAL}}</p>
+            <br>
+            <span>{{mydetail.detail}}</span>
+            <p class="text-danger">￥{{mydetail.PRICE}}</p>
+        </div>
+    </div>
+     <div class="alert detail-footer">
+         <button class="btn btn-success pull-right" ng-click="myorder()">我要订餐</button>
+         <button class="btn btn-warning pull-right" ng-click="again()">我再看看</button>
+     </div>
+</div>
+<div id="footer" ng-include="'tpl/footer.html'"></div>
+

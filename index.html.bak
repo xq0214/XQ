@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>刘威-web前端简历</title>
+    <meta name="description" content="刘威">
+    <link rel="shortcut icon" href="src/imgs/lovely.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/index_f2a873c.css">
+    <script data-main="src/js/bulid/main" src="src/js/libs/require.js"></script>
+</head>
+<body style="">
+<div id="pageContain" style="height: 617px;">
+
+    <div class="page page1  current"
+         style="transition-timing-function:cubic-bezier(0.42, 0, 0.58, 1);transform-origin: 50% 50% 0px; transform: translate(0px, 0px) translateZ(0px) scale(1) rotate(0deg); opacity: 1; transition-duration: 1000ms;">
+        <div class="contain">
+            <div class="myavatar"><img class="z-depth-3" src="src/imgs/me.png"></div>
+            <h1 class="myname">Hi,我叫刘威</h1>
+            <p class="subtitle">永远不要跟别人比幸运，我从来没想过我比别人幸运，<br>我许比他们更有毅力，在最困难的时候，他们熬不住了，我可以多熬一秒钟、两秒钟。</p>
+            <h5>web前端工程师</h5>
+            <a data-target="modal1" class="modal-trigger btn mybtn">详细介绍</a>
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal mydatas">
+                <div class="modal-content">
+                    <h6>基本资料</h6>
+                    <div class="row">
+                        <span class="col s12">姓名：刘威</span>
+                        <span class="col s12">年龄：22</span>
+                        <span class="col s12">工作经验:1年一下</span>
+                        <span class="col s12">学历：本科</span>
+                        <span class="col s12">毕业学校：武汉大学珞珈学院</span>
+					    <span class="col s12">专业:软件工程</span> 			
+                        <span class="col s12">应聘职位：WEB前端工程师</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">关闭</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page page2"
+         style="transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); transform-origin: 50% 50% 0px; transform: translate(0px, 0px) translateZ(0px) scale(1) rotate(0deg); opacity: 1; transition-duration: 1000ms;">
+        <div class="contain">
+            <h4 class="text-center">技术专长</h4>
+            <div class="myskills text-center">
+                <a class="stress">HTML/HTML5</a>
+                <a class="stress">CSS/CSS3</a>
+                <a class="stress">JavaScript</a>
+                <a class="stress">jQuery</a>
+                <a class="stress">Bootstrap</a>
+                <a class="stress">Materialize</a>
+                <a class="stress">PhotoShop</a>
+                <a class="stress">webstorm</a>
+                <a class="stress">Git/Github客户端</a>
+                <a class="stress">Angular</a><br><br>
+                <a class="stress"><i>勤奋的含义是今天的热血，<br>而不是明天的决心，<br>后天的保证。<br> 为了梦想,我一直努力!</i></a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="page page3 "
+         style="transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); transform-origin: 50% 50% 0px; transform: translate(0px, 0px) translateZ(0px) scale(1) rotate(0deg); opacity: 1; transition-duration: 1000ms;">
+        <div class="contain">
+            <h4 class="text-center">学习过程</h4>
+            <div class="experience">
+                <div class="time-line"></div>
+                <div class="work-content">
+                    <div class="work-item">
+                        <div class="year-flag rel">
+                            2013年
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="mouth-flag rel">
+                            <span>9月</span>
+                        </div>
+                        <div class="work-box wow_01">
+                            <p>
+                                刚开始我的欢乐的大学生活.....
+                            </p>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="year-flag rel">
+                            2015年
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="mouth-flag rel">
+                            <span>9月</span>
+                        </div>
+                        <div class="work-box wow_02">
+                            <p>
+                                专业课和老师一起做些静态网页,用javascript做一做小游戏娱乐
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="work-item">
+                        <div class="mouth-flag rel">
+                            <span>~~~</span>
+                        </div>
+                        <div class="work-box wow_03">
+                            <p>
+                                做过电商网页(淘宝),响应式英特尔网页
+                            </p>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="year-flag rel">
+                            2016年
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="mouth-flag rel">
+                            <span>3月~~现在</span>
+                        </div>
+                        <div class="work-box wow_04">
+                            <p>
+                                开始从后端了解，学过基础的php，Mysql的常用操作。熟悉数据请求和接收，具体项目下一页。
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page page4 "
+         style="transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); transform-origin: 50% 50% 0px; transform: translate(0px, 0px) translateZ(0px) scale(1) rotate(0deg); opacity: 1; transition-duration: 1000ms;">
+        <div class="contain">
+            <h4 class="text-center">个人项目/作品</h4>
+            <div class="p4subtitle">（welcome）</div>
+            <ul class="collection row">
+
+                <li class="collection-item col s11 m5 avatar">
+                    <i class="circle">1</i>
+                    <span class="title">Intel的响应式网页</span>
+                    <p>利用bootstrap搭建<br>
+                        <a target="_blank" href="bootstrappj/intel.html">英特尔intel.html</a>
+                    </p>
+                </li>
+                <li class="collection-item col s11 m5 avatar">
+                    <i class="circle">2</i>
+                    <span class="title">jd的静态网页</span>
+                    <p>学习完HTML+CSS做的<br>
+                        <a target="_blank" href="jd/jd.html">京东index.html</a>
+                    </p>
+                </li>
+                <li class="collection-item col s11 m5 avatar">
+                    <i class="circle">3</i>
+                    <span class="title">2048小游戏</span>
+                    <p>javascript实现<br>
+                        <a target="_blank" href="2048/2048.html">2048小游戏</a>
+                    </p>
+                </li>
+                <li class="collection-item col s11 m5 avatar">
+                    <i class="circle">4</i>
+                    <span class="title">开饭啦项目webapp</span>
+                    <p>需要数据库支持,但是阿里云没备案用不了.在本人笔记本上.</p>
+                </li>
+            </ul>
+        </div>
+        <div class="p4bg">
+
+        </div>
+    </div>
+
+    <div class="page page5"
+         style="transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); transform-origin: 50% 50% 0px; transform: translate(0px, 0px) translateZ(0px) scale(1) rotate(0deg); opacity: 1; transition-duration: 1000ms;">
+        <div class="contain">
+            <h4 class="text-center">公司期望</h4>
+            <div class="expect">
+                <p>深圳,公司行业不限</p>
+                <p>同事友好,可以交流学习</p>
+                <p>有良好的企业氛围和晋升空间</p>
+                <p>---要求不过分吧^_^</p>
+                <blockquote></blockquote>
+            </div>
+        </div>
+    </div>
+
+    <div class="page page6"
+         style="transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); transition-duration: 1000ms; transform: translate(0px, 0px) translateZ(0px) scale(1) rotate(0deg); transform-origin: 50% 50% 0px; opacity: 1;">
+        <div class="contain">
+            <h4 class="text-center">联系方式</h4>
+            <div class="callme">
+                <p>姓名:刘威</p>
+                <p>电话：15071276827</p>
+                <p>QQ：504393462</p>
+                <p>邮箱：504393462@qq.com</p>
+            </div>
+            <div class="social">
+                <a class="call-item modal-trigger" href="#modal-wx"></a>
+                <div id="modal-wx" class="modal">
+                    <div class="modal-content">
+                        <h5>扫一扫，添加好友</h5>
+                        <p class="text-center"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!"
+                           class="modal-action modal-close waves-effect waves-green btn-flat">确定</a>
+                    </div>
+                </div>
+            </div>
+            <div class="share">
+                <h4>请联系我,谢谢!</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<ul id="navBar">
+    <li data-page="0" class="active"></li>
+    <li data-page="1"></li>
+    <li data-page="2"></li>
+    <li data-page="3"></li>
+    <li data-page="4"></li>
+    <li data-page="5"></li>
+</ul>
+<div class="hiddendiv common"></div>
+</body>
+</html>

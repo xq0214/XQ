@@ -1,0 +1,121 @@
+@import "bootstrap.less";
+@navlog-height:42px;
+
+body{
+    margin-top: @navbar-height;
+}
+.main{
+    background: @blue-dark;
+    color:@text-color-light;
+    a{
+        color:@text-color-light;
+        &:hover{color:@blue-lighter;}
+    }
+    >.container>.row{
+        margin-bottom:40px;
+    }
+}
+.navlog{
+    width:63px;
+    height: @navlog-height;
+    display:inline-block;
+    background:url("../img/hdr-spr.png") 0 -512px no-repeat;
+    margin-top:(@navbar-height - @navlog-height)/2;
+}
+@media screen and (min-width:1200px) {
+    .change{  height: 202px;}
+    .logoimg{
+        position:absolute;
+        top:41px;
+        left:19px;
+    }
+}
+@media screen and (max-width:1199px) and (min-width:992px){
+    .change{  height: 165px;}
+    .logoimg{
+        position:absolute;
+        top:28px;
+        left:6px;
+    }
+}
+@media screen and (max-width:991px) and (min-width:768px){
+    .change{  height: 195px;}
+    .logoimg{
+        position:absolute;
+        top:41px;
+        left:19px;
+    }
+}
+.masking-parent{
+    position:relative;
+    background:#0071c5;
+}
+
+@media screen and (min-width:768px) {
+    .masking{
+        position:absolute;
+        bottom:0;
+        color:#fff;
+        right:0;
+        left:0;
+        padding-left:15px;
+    }
+}
+
+.masked{
+    position:relative;
+}
+.mask{
+    position:absolute;
+    top:80%;
+    left:0;
+    right:0;
+    bottom:0;
+    background: rgba(0,0,0,0.5);
+    color:#fff;
+    padding:5px 0 0 10px;
+    transition: top 0.5s linear;
+}
+.masked>.mask:hover{
+    top:0;
+}
+.logo{
+    height:100%;
+    width:33.3%;
+    position:relative;
+}
+//.logoimg{
+//    position:absolute;
+//    top:0px;
+//    left:0px;
+//}
+
+@media screen and (max-width:768px) {
+    .logoimg{
+        padding:30px 20px;
+    }
+}
+.text{
+    height:100%;
+    width:66.6%;
+}
+.textblock{
+    margin: 10% auto;
+}
+.textblock2{
+ margin-left: 20%;
+    margin-top:6%;
+}
+
+.left{float:left;}
+.right{float:right;}
+.login{
+    width:400px;
+    background-color:#fff;
+    padding-left:15px;
+    padding-right:15px;
+}
+.footer{
+    margin-top:20px;
+}
+

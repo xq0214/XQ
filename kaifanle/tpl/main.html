@@ -1,0 +1,27 @@
+<div id="header" ng-include="'tpl/header.html'"></div>
+<div class="container">
+    <div class="form-group has-feedback search">
+        <label for="search" class="sr-only">搜索</label>
+        <input ng-model="kw" class="form-control" type="text" id="search" placeholder="请输入搜索关键字">
+        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+    </div>
+    <div class="main">
+        <div class="food" ng-repeat="k in dishList">
+            <div class="foodImg"><a id="d{{k.DID}}" href="#/detail/{{k.DID}}"><img ng-src="img/{{k.IMG_SM}}"></a></div>
+            <div class="foodText">
+                <h3>{{k.NAME}}</h3>
+                <p>原料:{{k.MATERIAL}}</p>
+                <hr class="hr">
+                <h5 class="text-danger">￥{{k.PRICE}}</h5>
+            </div>
+        </div>
+    </div>
+    <button ng-if="search" ng-show="add"type="button" ng-click="more()" class="btn btn-success btn-block mainBtn" ng-disabled="loading">
+        <span ng-hide="loading">加载更多</span>
+        <img ng-show="loading" class="loadgif" src="img/loading.gif" alt="">
+    </button>
+    <div ng-if="search" ng-hide="add" class="alert alert-danger info">亲！没有更多内容啦~~</div>
+    <div ng-hide="search" class="alert alert-success info">亲！为您搜索到<b>{{num}}</b>条数据0.0</div>
+</div>
+
+<div id="footer" ng-include="'tpl/footer.html'"></div>
