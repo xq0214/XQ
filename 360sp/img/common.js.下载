@@ -1,0 +1,527 @@
+/**
+ * @copyright: Copyright (c) 2015-2020 jd.com All Rights Reserved
+ * @file: common.java project: jcloud-b2c-mall-web
+ * @creator: lidongxing
+ * @date: 2017/2/21
+ */
+
+/**
+ * @description: 楼层
+ * @author: lidongxing
+ * @requireNo:
+ * @createdate: 2017-02-13 21:18
+ * @lastdate:
+ */
+;
+var tempTemplate;
+
+String.prototype.protocol = function(){
+
+    var str = this;
+
+    str = window.isSupportWebp ? (str.replace(/(\.jpg|\.png)/g, ".webp")) : str;
+
+    return str.replace(/http:\/\/p\d\.qh[imgs]{3}/,"https://p.ssl.qhmsg");
+};
+!function(){function a(a){return a.replace(t,"").replace(u,",").replace(v,"").replace(w,"").replace(x,"").split(y)}function b(a){return"'"+a.replace(/('|\\)/g,"\\$1").replace(/\r/g,"\\r").replace(/\n/g,"\\n")+"'"}function c(c,d){function e(a){return m+=a.split(/\n/).length-1,k&&(a=a.replace(/\s+/g," ").replace(/<!--[\w\W]*?-->/g,"")),a&&(a=s[1]+b(a)+s[2]+"\n"),a}function f(b){var c=m;if(j?b=j(b,d):g&&(b=b.replace(/\n/g,function(){return m++,"$line="+m+";"})),0===b.indexOf("=")){var e=l&&!/^=[=#]/.test(b);if(b=b.replace(/^=[=#]?|[\s;]*$/g,""),e){var f=b.replace(/\s*\([^\)]+\)/,"");n[f]||/^(include|print)$/.test(f)||(b="$escape("+b+")")}else b="$string("+b+")";b=s[1]+b+s[2]}return g&&(b="$line="+c+";"+b),r(a(b),function(a){if(a&&!p[a]){var b;b="print"===a?u:"include"===a?v:n[a]?"$utils."+a:o[a]?"$helpers."+a:"$data."+a,w+=a+"="+b+",",p[a]=!0}}),b+"\n"}var g=d.debug,h=d.openTag,i=d.closeTag,j=d.parser,k=d.compress,l=d.escape,m=1,p={$data:1,$filename:1,$utils:1,$helpers:1,$out:1,$line:1},q="".trim,s=q?["$out='';","$out+=",";","$out"]:["$out=[];","$out.push(",");","$out.join('')"],t=q?"$out+=text;return $out;":"$out.push(text);",u="function(){var text=''.concat.apply('',arguments);"+t+"}",v="function(filename,data){data=data||$data;var text=$utils.$include(filename,data,$filename);"+t+"}",w="'use strict';var $utils=this,$helpers=$utils.$helpers,"+(g?"$line=0,":""),x=s[0],y="return new String("+s[3]+");";r(c.split(h),function(a){a=a.split(i);var b=a[0],c=a[1];1===a.length?x+=e(b):(x+=f(b),c&&(x+=e(c)))});var z=w+x+y;g&&(z="try{"+z+"}catch(e){throw {filename:$filename,name:'Render Error',message:e.message,line:$line,source:"+b(c)+".split(/\\n/)[$line-1].replace(/^\\s+/,'')};}");try{var A=new Function("$data","$filename",z);return A.prototype=n,A}catch(B){throw B.temp="function anonymous($data,$filename) {"+z+"}",B}}var d=function(a,b){return"string"==typeof b?q(b,{filename:a}):g(a,b)};d.version="3.0.0",d.config=function(a,b){e[a]=b};var e=d.defaults={openTag:"<%",closeTag:"%>",escape:!0,cache:!0,compress:!1,parser:null},f=d.cache={};d.render=function(a,b){return q(a,b)};var g=d.renderFile=function(a,b){var c=d.get(a)||p({filename:a,name:"Render Error",message:"Template not found"});return b?c(b):c};d.get=function(a){var b;if(f[a])b=f[a];else if("object"==typeof document){var c=document.getElementById(a);if(c){var d=(c.value||c.innerHTML).replace(/^\s*|\s*$/g,"");b=q(d,{filename:a})}}return b};var h=function(a,b){return"string"!=typeof a&&(b=typeof a,"number"===b?a+="":a="function"===b?h(a.call(a)):""),a},i={"<":"&#60;",">":"&#62;",'"':"&#34;","'":"&#39;","&":"&#38;"},j=function(a){return i[a]},k=function(a){return h(a).replace(/&(?![\w#]+;)|[<>"']/g,j)},l=Array.isArray||function(a){return"[object Array]"==={}.toString.call(a)},m=function(a,b){var c,d;if(l(a))for(c=0,d=a.length;d>c;c++)b.call(a,a[c],c,a);else for(c in a)b.call(a,a[c],c)},n=d.utils={$helpers:{},$include:g,$string:h,$escape:k,$each:m};d.helper=function(a,b){o[a]=b};var o=d.helpers=n.$helpers;d.onerror=function(a){var b="Template Error\n\n";for(var c in a)b+="<"+c+">\n"+a[c]+"\n\n";"object"==typeof console&&console.error(b)};var p=function(a){return d.onerror(a),function(){return"{Template Error}"}},q=d.compile=function(a,b){function d(c){try{return new i(c,h)+""}catch(d){return b.debug?p(d)():(b.debug=!0,q(a,b)(c))}}b=b||{};for(var g in e)void 0===b[g]&&(b[g]=e[g]);var h=b.filename;try{var i=c(a,b)}catch(j){return j.filename=h||"anonymous",j.name="Syntax Error",p(j)}return d.prototype=i.prototype,d.toString=function(){return i.toString()},h&&b.cache&&(f[h]=d),d},r=n.$each,s="break,case,catch,continue,debugger,default,delete,do,else,false,finally,for,function,if,in,instanceof,new,null,return,switch,this,throw,true,try,typeof,var,void,while,with,abstract,boolean,byte,char,class,const,double,enum,export,extends,final,float,goto,implements,import,int,interface,long,native,package,private,protected,public,short,static,super,synchronized,throws,transient,volatile,arguments,let,yield,undefined",t=/\/\*[\w\W]*?\*\/|\/\/[^\n]*\n|\/\/[^\n]*$|"(?:[^"\\]|\\[\w\W])*"|'(?:[^'\\]|\\[\w\W])*'|\s*\.\s*[$\w\.]+/g,u=/[^\w$]+/g,v=new RegExp(["\\b"+s.replace(/,/g,"\\b|\\b")+"\\b"].join("|"),"g"),w=/^\d[^,]*|,\d[^,]*/g,x=/^,+|,+$/g,y=/^$|,+/;e.openTag="{{",e.closeTag="}}";var z=function(a,b){var c=b.split(":"),d=c.shift(),e=c.join(":")||"";return e&&(e=", "+e),"$helpers."+d+"("+a+e+")"};e.parser=function(a){a=a.replace(/^\s/,"");var b=a.split(" "),c=b.shift(),e=b.join(" ");switch(c){case"if":a="if("+e+"){";break;case"else":b="if"===b.shift()?" if("+b.join(" ")+")":"",a="}else"+b+"{";break;case"/if":a="}";break;case"each":var f=b[0]||"$data",g=b[1]||"as",h=b[2]||"$value",i=b[3]||"$index",j=h+","+i;"as"!==g&&(f="[]"),a="$each("+f+",function("+j+"){";break;case"/each":a="});";break;case"echo":a="print("+e+");";break;case"print":case"include":a=c+"("+b.join(",")+");";break;default:if(/^\s*\|\s*[\w\$]/.test(e)){var k=!0;0===a.indexOf("#")&&(a=a.substr(1),k=!1);for(var l=0,m=a.split("|"),n=m.length,o=m[l++];n>l;l++)o=z(o,m[l]);a=(k?"=":"=#")+o}else a=d.helpers[c]?"=#"+c+"("+b.join(",")+");":"="+a}return a},tempTemplate=d,"function"==typeof define?define(function(){return d}):"undefined"!=typeof exports?module.exports=d:tempTemplate=d}();
+
+var mall = window.mall || {};
+
+
+// 获取url中的参数
+mall.getUrlParam = function(param){
+    var params = location.search.substr(1).split(/\&|\?/);
+    var val = ""
+    $.each(params,function(i,str){
+        var arr = str.split('=');
+        if (arr[0]==param){
+            val = arr[1]
+        }
+    })
+    return val;
+}
+
+// 购物车相关接口
+mall.cart = (function(){
+    // 多域名
+    // document.domain = document.domain.split('.').reverse().slice(0,3).reverse().join('.');
+    // 如果为第三方官网，则加上域名，否则使用当前域名
+    var host = "//i360mall.com";
+
+    var getNum = function(fn){
+        $.getJSON(host + '/cart/getCartNum?callback=?', function(data){
+            var num = 0
+            if(data.errorCode == 0){
+                num = data.data;
+            }
+            fn && fn(num);
+        });
+    }
+
+    var getList = function(fn){
+        $.getJSON(host + '/cart/getShopCart?callback=?',function(data){
+            var list = [], status = 0;
+            if(data.errorCode == 0){
+                list = data.data;
+                status = 1;
+            }else{
+                //status = -1;
+                status = data.errorCode;
+            }
+
+            fn && fn(status,list)
+        });
+    }
+
+    var delItem = function(data, fn){
+        $.getJSON(host + '/cart/delFromCart?callback=?',data, function(){
+            fn && fn();
+        },'json')
+    }
+
+    var addCart = function(id, fn){
+        $.getJSON(host + '/shop/addtocart?callback=?',{
+            item_id : id,
+            num : 1,
+            qtoken : $('.qtoken').val(),
+            qtoken_timestamp : $('.qtokentimestamp').val()
+        },function(data){
+            if(data.errno==0){
+                fn && fn.apply(this,arguments);
+            }else if(data.errno==40005){
+                mall.dialog.alert(data.errmsg,function(){
+                    window.location.href = '/shop/shopcart';
+                })
+            }else{
+                mall.dialog.alert(data.errmsg)
+            }
+        },'json')
+    }
+
+    return {
+        getNum : getNum,
+        getList : getList,
+        delItem : delItem,
+        addCart : addCart
+    }
+})();
+
+mall.header = (function(){
+    var host = "//i360mall.com";
+    var getUserInfo = function(data, sucFunction, failFunction){
+        $.ajax({
+            url: host+"/getLoginInfo",
+            data: data,
+            //dataType : 'json',
+            dataType : 'jsonp',
+            jsonp:'jsoncallback',
+            success: function(data) {
+                if(data.login && data.login == 'y'){
+                    sucFunction(data);
+                }else{
+                    failFunction(data);
+                }
+            },
+            error : function() {
+                //alert('fail');
+            }
+        });
+    };
+
+// 0导航
+    var initTopbar = function(){
+        //导航栏效果
+        $(".loginafter").hover(
+            function () {
+                $(this).find('.popbox').show();
+            },
+            function () {
+                $(this).find('.popbox').hide();
+            }
+        );
+        //收藏按钮
+        $('.js-connect').click(function(){
+            try{
+                window.sidebar && "object" == typeof window.sidebar && "function" == typeof window.sidebar.addPanel ? window.sidebar.addPanel("360商城_中国最大智能硬件体验平台", "//i360mall.com", "") : document.all && "object" == typeof window.external ? window.external.addFavorite("//i360mall.com", "360商城_中国最大智能硬件体验平台") : alert("\u60a8\u4f7f\u7528\u7684\u6d4f\u89c8\u5668\u4e0d\u652f\u6301\u6b64\u529f\u80fd\uff0c\u8bf7\u6309\u201cCtrl + D\u201d\u952e\u624b\u5de5\u52a0\u5165\u6536\u85cf")
+            }
+            catch (e) {
+                alert("\u60a8\u4f7f\u7528\u7684\u6d4f\u89c8\u5668\u4e0d\u652f\u6301\u6b64\u529f\u80fd\uff0c\u8bf7\u6309\u201cCtrl + D\u201d\u952e\u624b\u5de5\u52a0\u5165\u6536\u85cf")
+            }
+        })
+    }
+
+    var initCartInfos = function(){
+        //购物车
+        var cartEle = $('.topshopcart .header-cart'),
+            cartPopEle = $('.topshopcart .header-cart-popup');
+        var cartUpdateTimeout = 3000,
+            isTimeout = true;
+
+        var showCartPop = function(now){
+            cartEle.addClass('cart-hover');
+            if(isTimeout || now){
+                showPopCartTip('正在加载购物车...');
+                isTimeout = false;
+                setTimeout(function(){
+                    isTimeout = true;
+                },cartUpdateTimeout);
+
+                mall && mall.cart && mall.cart.getList(function(status,list){
+                    if(status == -1){
+                        var loginUrl = host+"/login?returnUrl="+encodeURIComponent(window.location.href);
+                        showPopCartTip('请 <a class="tip-login" href="#" data-monitor="home_title_shopcartlogin">登录</a> 后查看您的购物车。')
+                            .find('.tip-login').attr("href",loginUrl);
+                    }else if(status==1){
+                        var count = (list && list.mainSkuCount) || 0;
+                        if(count>0){
+                            hidePopCartTip();
+                            displayCartList(list);
+                        }else{
+                            showPopCartTip('您的购物车还没有商品，赶紧去选购吧！')
+                        }
+                        cartEle.find('.cart-size').html('('+count+')');
+
+                    }else{
+                        showPopCartTip('获取购物车失败，请稍候再试');
+                    }
+                })
+
+            }
+
+            cartPopEle.show();
+        };
+
+        var hideCartPop = function(){
+            cartEle.removeClass('cart-hover');
+            cartPopEle.hide();
+        }
+
+        var displayCartList = function(list){
+            var html = ['<ul class="cart-list">']
+            $.each(list.products,function(key, data){
+                var pic = imageFormat_sys(data.image, 72, 72);
+                pic = window.isSupportWebp ? pic.replace(".jpg", ".webp") : pic;
+                html.push([
+                    '<li class="cart-item">',
+                    '<a href="'+host+'/shop/item?itemId='+data.id+'" target="_blank" class="cart-item-img">',
+                    //'<img src="'+pic.protocol()+'"><span class="cart-item-text"><strong>'+data.name+'</strong></span>',
+                    '<img src="'+data.image+'"><span class="cart-item-text"><strong>'+data.name+'</strong></span>',
+                    '</a>',
+                    '<span class="cart-item-price"><span class="yen">¥</span>'+(data.promoPrice*1).toFixed(2)+'</span>',
+                    '<span class="cart-item-num"> &times;'+data.num+'</span>',
+                    '<a class="cart-item-del" href="#" onclick="return false;" data-id="'+data.id+'" data-num="'+data.num+'" data-type="'+data.type+'" data-promotionId="'+data.promotionId+'" data-monitor="home_title_shopcartdelete"></a>',
+                    '</li>'
+                ].join(''));
+            });
+            html.push('</ul>');
+            html.push([
+                '<div class="cart-count">',
+                '<span style="color:#31373c;">共<b>'+list.mainSkuCount+'</b>件商品 总计：<b><span class="yen" style="color:#e94c30;">¥</span>'+list.factPrice+'</b></span>',
+                '<a data-monitor="home_title_shopcartgo" class="cart-buy" href="//trade.i360mall.com/cart">去购物车</a>',
+                '</div>'
+            ].join(''));
+
+            cartPopEle.find('.cart-info').html(html.join(''));
+        }
+
+        var hidePopCartTip = function(){
+            cartPopEle.removeClass('pop-show-tip');
+        }
+
+        var showPopCartTip = function(txt){
+            cartPopEle.find('.cart-info').html('')
+            return cartPopEle.addClass('pop-show-tip').find('.cart-tips').html(txt);
+        };
+
+        var initCart = function(){
+            cartEle.mouseenter(function(){
+                showCartPop();
+            }).parent().mouseleave(function(){
+                hideCartPop();
+            })
+
+            cartPopEle.on('click','.cart-item-del',function(e){
+                var data = {
+                    "itemId" : $(e.target).attr('data-id'),
+                    "num" : $(e.target).attr('data-num'),
+                    "type" : $(e.target).attr('data-type'),
+                    "promotionId" : $(e.target).attr('data-promotionId')
+                };
+                mall && mall.cart && mall.cart.delItem(data, function(){
+                    showCartPop(true);
+                })
+            })
+        };
+        if(cartEle && cartEle.length>0){
+            initCart();
+        }
+    };
+
+    // 更新购物车显示数量
+    var updateCartNum = function(){
+        var cart = $('.topshopcart');
+        cart && cart.length>0 && mall.cart.getNum(function(num){
+            cart.find('.cart-size').html('('+num+')');
+            num >0?cart.addClass('carthas'):cart.removeClass('carthas');
+        });
+    }
+
+    var init = function(){
+        initTopbar();
+        initCartInfos();
+        updateCartNum();
+    };
+
+    return {
+        getUserInfo : getUserInfo,
+        init : init,
+        updateCartNum : updateCartNum
+    }
+})();
+
+//JS 打开新页面
+mall.win = (function(){
+    var openBlank= function(url){
+        var newTab=window.open('about:blank');
+        newTab.location.href=url;
+    }
+    return {
+        openBlank : openBlank
+    }
+})();
+
+// 弹窗
+mall.dialog = (function(){
+    var eleBg,eleBox;
+    var config = {};
+
+    var init = function(){
+        var htmlarr = [];
+        htmlarr.push('<div class="mod-dialog-bg"></div><div class="mod-dialog">');
+        config.hasNav && htmlarr.push('<div class="dialog-nav"><span class="dialog-title"></span><a href="#" onclick="return false" class="dialog-close"></a></div>');
+        htmlarr.push('<div class="dialog-main"></div></div>');
+        var html = htmlarr.join('');
+
+        var eles = $(html).hide().appendTo('body');
+
+        eleBg = eles.filter('.mod-dialog-bg');
+        eleBox = eles.filter('.mod-dialog');
+
+        eleBox.find('.dialog-close').click(function(){
+            hide();
+        });
+    }
+
+    var render = function(){
+        //eleBox.width(config.width||'auto');
+        eleBox.css('width',config.width||'');
+
+        eleBox.find('.dialog-title').html(config.title);
+        eleBox.find('.dialog-main').html(config.html);
+
+        eleBox.show();
+        eleBg.show();
+        setTimeout(setPos,50);
+    }
+
+    var setPos = function(){
+        //var left = ($(window).width()-eleBox.width())/2;
+
+        var viewportH = window.innerHeight || document.documentElement.clientHeight;
+        /*
+        var top=$(window).height();
+        BUG：这种写法在shop/gotoorder页面，top值获取不正确，获取值应为视口高度，而在该页面下为整个文档的高度，
+             在别的页面暂时未发现问题
+        2016-3-9
+        */
+        var top = (viewportH-eleBox.height())/2;
+
+        top = top>0?top+$(window).scrollTop() : $(window).scrollTop();
+
+        eleBox.css({
+            //left: left,
+            top : top
+        })
+    }
+
+    var show = function(cfg){
+
+        if(typeof cfg != 'object'){
+            cfg = {
+                html : cfg || ''
+            }
+        }
+
+        config = $.extend({
+            title : '提示',
+            html : '',
+            // width : 530,
+            closeFn : null,
+            hasNav : true
+        },cfg)
+
+        if(!eleBox){
+            init();
+        }
+
+        render();
+
+        return eleBox;
+    }
+
+    var hide = function(){
+        eleBg && eleBg.hide();
+        eleBox && eleBox.hide();
+
+        config.closeFn && config.closeFn.call(this);
+    }
+
+    return {
+        show : show,
+        hide : hide
+    }
+})();
+
+ mall.dialog.confirm = function(text,okFn,cancelFn){
+    var html = [
+        '<div class="dialog-content">',
+            '<p>'+text+'</p>',
+        '</div>',
+        '<div class="dialog-console clearfix_new">',
+            '<a class="console-btn-confirm" href="#" onclick="return false;">确定</a>',
+            '<a class="console-btn-cancel" href="#" onclick="return false;">取消</a>',
+        '</div>'].join('');
+
+    var ele = mall.dialog.show({
+        html : html
+    });
+
+    ele.find('.console-btn-confirm').click(function(){
+        var rt = okFn && okFn.call(ele);
+        if(rt !== false) mall.dialog.hide();
+    })
+
+    ele.find('.console-btn-cancel').click(function(){
+        cancelFn && cancelFn.call(ele);
+        mall.dialog.hide();
+    })
+
+    return ele;
+}
+
+mall.dialog.alert = function(text,callback){
+    var html = [
+        '<div class="dialog-content">',
+        '<p>'+text+'</p>',
+        '</div>',
+        '<div class="dialog-console clearfix_new">',
+        '<a class="console-btn-confirm" href="#" onclick="return false;">确定</a>',
+        '</div>'].join('');
+
+    var ele = mall.dialog.show({
+        html : html
+    });
+
+    ele.find('.console-btn-confirm').click(function(){
+        var rt = callback && callback.call(ele);
+        if(rt !== false) mall.dialog.hide();
+    })
+
+    return ele;
+}
+
+$(function(){
+    mall.header.getUserInfo({},function(data) {
+        if (data.login && data.login == 'y') {
+            $('.loginWrap').show().find('.popUsername').text(data.nickName || data.userName);
+            $('.nloginWrap').hide();
+        }
+    }, function(data){
+
+    });
+
+    mall.header.init();
+
+    $(".topshopcart").hover(function(){
+
+        $(".header-cart").addClass('cart-hover');
+        $(".header-cart-popup").css("display","block");
+        $(".cart-info").css("display","block");
+    },function(){
+
+        $(".header-cart").removeClass('cart-hover');
+        $(".header-cart-popup").css("display","none");
+        $(".cart-info").css("display","none");
+    });
+});
+
+/**
+ * 替换图片服务器图片的URL
+ * url="jfs/t1/45/52430153/298522/f1faa01a/538429bdN260d118a.jpg"
+ * 替换为 url="http://img20.360buyimg.com/test/s100x100_jfs/t1/45/52430153/298522/f1faa01a/538429bdN260d118a.jpg"
+ * @param url
+ * @param width
+ * @param height
+ * @returns {*}
+ */
+function imageFormat_sys(url, width, height){
+    if(!url){
+        console.error("参数异常！");
+        return "";
+    }
+    if(!width || !height){
+        console.error("未传入图片分辨率参数");
+        return "";
+    }
+    var index = url.lastIndexOf(".");
+    var type = url.substring(index*1 + 1, url.length);
+    if(type == "gif" || type == "GIF"){
+        console.error("图片格式错误");
+        return "";
+    }
+    var protocol_header = "//";
+    var JSS_SERVER_DOMAIN = "img11.360buyimg.com";
+    var SPLITTER  = "/";
+    var REGEX = "jfs";
+    var FIRST = "s";
+    var DEL = "x";
+    var LAST = "_jfs";
+    var ret_url = protocol_header + JSS_SERVER_DOMAIN + SPLITTER + "n1" + SPLITTER + url.replace(REGEX, FIRST + width + DEL + height + LAST);
+    //console.info("ret_url=" + ret_url);
+    return ret_url;
+}
+
+/**
+ * 异步获取price
+ * @param fun
+ */
+function priceOperation(fun){
+    var priceDom = $("[data-price='y']");
+    var skus = [];
+    var domLength = priceDom.length;
+    $.each(priceDom, function(i, priceD) {
+        var sku = $(priceDom[i]).data("skuid");
+        if (sku) {
+            skus.push(sku);
+        }
+        if ((i > 0 && i % 99 == 0) || i + 1 == domLength){
+            $.ajax({
+                url:"//i360mall.com/shop/batchPrice",
+                type:"get",
+                dataType:"jsonp",
+                jsonp:"callback",
+                async:true,
+                data:{"itemIds":skus.join(",")},
+                success:function(obj){
+                    if(obj.isSuccess){
+                        fun(obj.data);
+                    }else{
+                    }
+                },
+                error : function() {
+                    //alert('fail');
+                }
+            });
+        }
+    });
+}
